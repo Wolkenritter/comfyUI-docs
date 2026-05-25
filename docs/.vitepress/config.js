@@ -302,6 +302,19 @@ export default defineConfig({
           ]
         }
       ]
+    },
+    // 其他配置...
+    enhanceApp({ router }) {
+      // 每次路由切换时，重新加载广告
+      router.afterEach(() => {
+        if (window.adsbygoogle) {
+          // 这里需要添加ad client id
+          window.adsbygoogle.push({
+            google_ad_client: 'ca-pub-2644340141064615',
+            enable_page_level_ads: true
+          });
+        }
+      });
     }
   },
   locales: {
