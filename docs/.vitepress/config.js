@@ -1,11 +1,25 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  ignoreDeadLinks: true,
   title: 'ComfyUI 中文文档',
-  description: 'ComfyUI 安装指南、界面设置、节点指南、设置指南',
+  description: 'ComfyUI 非官方中文百科，提供完整的安装指南、界面说明、节点文档、基础教程和高级教程。涵盖 ControlNet、Flux、文生图、图生图等核心技术。',
   base: '/',
+  cleanUrl: true,
   head: [
-    ['script', { async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxx', crossorigin: 'anonymous' }]
+    // SEO 基础
+    ['meta', { name: 'author', content: 'ComfyUI 中文文档' }],
+    ['meta', { name: 'robots', content: 'index, follow' }],
+    ['meta', { name: 'keywords', content: 'ComfyUI, Stable Diffusion, AI绘画, 节点式UI, ControlNet, Flux, LoRA, 教程, 中文文档, AIGC, 文生图, 图生图' }],
+    ['meta', { property: 'og:site_name', content: 'ComfyUI 中文文档' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    // 重复内容控制
+    ['link', { rel: 'canonical', href: 'https://comfyui.aijs.wang/' }],
+    // Favicon
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+    // 百度统计（可替换为自己的代码）
+    // ['script', { src: 'https://hm.baidu.com/hm.js?YOUR_CODE', defer: true }]
   ],
   themeConfig: {
     logo: '/logo.svg',

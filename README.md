@@ -4,7 +4,7 @@
 
 ## 📖 文档预览
 
-访问：[https://docs.aijs.wang/comfyUI-docs/](https://docs.aijs.wang/comfyUI-docs/)
+访问：[https://comfyui.aijs.wang/comfyUI-docs/](https://comfyui.aijs.wang/comfyUI-docs/)
 
 ## ✨ 功能特色
 

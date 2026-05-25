@@ -1,6 +1,10 @@
 ---
 layout: home
 
+title: ComfyUI 中文文档 - 完整的 AIGC 教程百科
+description: ComfyUI 非官方中文百科，提供安装指南、界面说明、节点文档、基础教程和高级教程。涵盖 ControlNet、Flux、文生图、图生图、LoRA 等核心技术。
+keywords: ComfyUI, Stable Diffusion, AI绘画, 节点式UI, ControlNet, Flux, LoRA, 教程, AIGC
+
 hero:
   name: "ComfyUI 百科速查手册"
   text: "掌握 AIGC 的在线 ComfyUI 教程文档"
@@ -22,7 +26,7 @@ features:
     link: /guide/installation
   - title: 🖥️ 界面说明
     details: 界面布局、节点操作、工作流、提示词技巧、快捷键等完整操作指南
-    link: /guide/interface
+    link: /guide/interface-basic
   - title: 📚 基础教程
     details: 11个入门教程：启动服务、首次生成、模型安装、提示词、局部重绘、扩图、放大等
     link: /tutorial/
