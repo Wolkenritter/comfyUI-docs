@@ -9,8 +9,14 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# 设置权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write  
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,24 +37,13 @@ jobs:
         run: npm run docs:build
 
       - name: Setup Pages
-        run: |
-          # 创建 CNAME 文件（如果有自定义域名）
-          if [ "$CNAME" != "" ]; then
-            echo "$CNAME" > docs/.vitepress/dist/CNAME
-          fi
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
