@@ -9,6 +9,9 @@ hero:
   name: "ComfyUI 百科速查手册"
   text: "掌握 AIGC 的在线 ComfyUI 教程文档"
   tagline: ComfyUI 非官方中文百科 · 持续更新中
+  image:
+    src: /logo-hero.svg
+    alt: ComfyUI
   actions:
     - theme: brand
       text: 开始安装 →

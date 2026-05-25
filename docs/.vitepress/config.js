@@ -33,19 +33,18 @@ export default defineConfig({
     searchResultsFound: '{count} 个结果',
     searchResultsNoResults: '未找到结果',
     searchGroupNone: '暂无结果',
-    prev: '上一页',
-    next: '下一页',
-    lastUpdated: '最后更新于',
-    contributors: '贡献者',
-    editLink: '编辑此页',
+    
+    lastUpdated: {
+      text: '最后更新于 ',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
     onThisPage: '在本页',
     onThisPageAriaLabel: '在本页',
     outlineTitle: '目录',
     outlineAriaLabel: '目录',
-    prevPage: '上一页',
-    prevPageTitle: '查看上一页',
-    nextPage: '下一页',
-    nextPageTitle: '查看下一页',
     notFound: {
       title: '页面未找到',
       link: '返回首页'
@@ -171,13 +170,40 @@ export default defineConfig({
             { text: 'Embedding', link: '/tutorial/embedding' },
             { text: 'LoRA', link: '/tutorial/lora' }
           ]
+        },
+        {
+          text: '高级教程',
+          items: [
+            { text: 'ControlNet', link: '/tutorial/advanced/controlnet' },
+            { text: 'Canny', link: '/tutorial/advanced/controlnet-canny' },
+            { text: 'Depth', link: '/tutorial/advanced/controlnet-depth' },
+            { text: 'OpenPose', link: '/tutorial/advanced/controlnet-openpose' },
+            { text: '多ControlNet', link: '/tutorial/advanced/multi-controlnet' },
+            { text: 'Flux 文生图', link: '/tutorial/advanced/flux-t2i' },
+            { text: 'Flux 图生图', link: '/tutorial/advanced/flux-i2i' },
+            { text: 'Flux Fill', link: '/tutorial/advanced/flux-fill' }
+          ]
         }
       ],
       '/tutorial/advanced/': [
         {
-          text: '高级教程',
+          text: '基础教程',
           items: [
             { text: '入门教程', link: '/tutorial/getting-started' },
+            { text: '启动服务', link: '/tutorial/how-to-run' },
+            { text: '首次生成', link: '/tutorial/first-image' },
+            { text: '共用模型', link: '/tutorial/share-models' },
+            { text: '提示词基础', link: '/tutorial/prompt-basic' },
+            { text: '局部重绘', link: '/tutorial/inpainting' },
+            { text: '扩图', link: '/tutorial/outpainting' },
+            { text: '放大', link: '/tutorial/upscale' },
+            { text: 'Embedding', link: '/tutorial/embedding' },
+            { text: 'LoRA', link: '/tutorial/lora' }
+          ]
+        },
+        {
+          text: '高级教程',
+          items: [
             { text: 'ControlNet', link: '/tutorial/advanced/controlnet' },
             { text: 'Canny', link: '/tutorial/advanced/controlnet-canny' },
             { text: 'Depth', link: '/tutorial/advanced/controlnet-depth' },
@@ -272,6 +298,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Wolkenritter/comfyUI-docs' }
     ],
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
     footer: {
       copyright: 'Copyright © 2026 ComfyUI Docs'
     }
@@ -284,5 +314,4 @@ export default defineConfig({
       description: 'ComfyUI 安装指南、界面设置、节点指南、设置指南'
     }
   },
-  lastUpdated: true
 })

@@ -14,7 +14,7 @@ ControlNet 是一种神经网络模型，可以根据额外的条件输入（如
 
 | 模型 | 用途 | 下载 |
 |------|------|------|
-| control_v11p_sd15_canny | 边缘检测 | [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) |
+| control_v11p_sd15_canny | 边缘检测 | [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) / [魔搭社区ModelScope](https://www.modelscope.cn/home)|
 | control_v11p_sd15_depth | 深度图 | 同上 |
 | control_v11p_sd15_openpose | 姿态 | 同上 |
 
@@ -22,7 +22,7 @@ ControlNet 是一种神经网络模型，可以根据额外的条件输入（如
 
 | 模型 | 用途 | 下载 |
 |------|------|------|
-| diffusers_xl_canny | 边缘 | [HuggingFace](https://huggingface.co/diffusers/controlnet) |
+| diffusers_xl_canny | 边缘 | [HuggingFace](https://huggingface.co/diffusers/controlnet) / [魔搭社区ModelScope](https://www.modelscope.cn/home)|
 
 ### 2. 安装位置
 

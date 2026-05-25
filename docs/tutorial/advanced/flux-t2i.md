@@ -18,7 +18,7 @@ Flux 是 Black Forest Labs 开发的最新图像生成模型，具有出色的 p
 
 ### 1. 下载模型
 
-从 Hugging Face 下载：
+从 [HuggingFace](https://huggingface.co/lllyasviel/ControlNet-v1-1) / [魔搭社区ModelScope](https://www.modelscope.cn/home) 下载：
 
 ```
 模型目录: ComfyUI/models/unet/

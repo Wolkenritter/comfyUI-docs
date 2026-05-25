@@ -22,6 +22,7 @@ LoRA 是一种轻量级模型微调技术，可以在不改变基础模型的情
 从以下网站下载：
 - [Civitai](https://civitai.com/?tags=25) - 最大的 LoRA 资源站
 - [Hugging Face](https://huggingface.co/sdromised/Lora)
+- [魔搭社区ModelScope](https://www.modelscope.cn/home) - 国内镜像，速度快
 
 ### 2. 安装位置
 
