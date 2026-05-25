@@ -39,16 +39,15 @@ features:
 
 <footer class="home-footer">
   <div class="container">
-    <div class="news-section">
+    <!-- <div class="news-section">
       <h3>🆕 最新资讯</h3>
       <div class="news-item">
         <a href="/news/2026-01-29-openmoss-mova">OpenMOSS 发布 MOVA - 开源音视频同步生成模型</a>
         <span class="date">2026/01/29</span>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
     <div class="footer-content">
-      <p>💡 很多内容仍在持续更新中</p>
-      <p class="copyright">Powered by VitePress · ComfyUI 百科</p>
+      <p>💡 更多内容仍在持续更新中...</p>
     </div>
   </div>
 </footer>

@@ -256,11 +256,10 @@ export default defineConfig({
       ],
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/comfyanonymous/ComfyUI' }
+      { icon: 'github', link: 'https://github.com/Wolkenritter/comfyUI-docs' }
     ],
     footer: {
-      message: '基于 VitePress 构建',
-      copyright: 'Copyright © 2024 ComfyUI Docs'
+      copyright: 'Copyright © 2026 ComfyUI Docs'
     }
   },
   locales: {

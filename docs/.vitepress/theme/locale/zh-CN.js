@@ -64,8 +64,7 @@ export default {
 
   // 页脚
   footer: {
-    message: '基于 VitePress 构建',
-    copyright: '版权所有 © 2024 ComfyUI Docs'
+    copyright: '版权所有 © 2026 ComfyUI Docs'
   },
 
   // 社交链接
