@@ -2,14 +2,8 @@
   <div class="ad-container" :class="[position, type]">
     <!-- Google AdSense -->
     <template v-if="type === 'adsense'">
-      <ins
-        class="adsbygoogle"
-        :style="adStyles"
-        data-ad-client="ca-pub-xxxxxxxxx"
-        data-ad-slot="xxxxxxxxx"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2644340141064615"
+     crossorigin="anonymous"></script>
     </template>
 
     <!-- 百度联盟 -->
