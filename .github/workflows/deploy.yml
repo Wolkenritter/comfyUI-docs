@@ -1,22 +1,23 @@
-name: Deploy ComfyUI Docs
+name: Deploy VitePress to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]  # 推送到 main 分支自动触发
+  workflow_dispatch:    # 允许手动触发
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-# 设置权限
+# 设置 GITHUB_TOKEN 权限
 permissions:
   contents: read
   pages: write
-  id-token: write  
+  id-token: write
+
+# 只允许一个并发部署
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,23 +28,28 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run docs:build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: Build VitePress
+        run: npm run docs:build  # 这里必须和你 package.json 一致
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: docs/.vitepress/dist  # VitePress 默认构建输出目录
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
