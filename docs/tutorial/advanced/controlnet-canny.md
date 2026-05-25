@@ -21,7 +21,10 @@ Canny ControlNet 通过检测图像边缘来控制生成，保留原始图像的
 control_v11p_sd15_canny.pth
 ```
 
-下载链接：[ControlNet Collection](https://huggingface.co/lllyasviel/ControlNet-v1-1)
+下载链接：
+- [ControlNet Collection](https://huggingface.co/lllyasviel/ControlNet-v1-1)
+
+- [魔搭社区ModelScope](https://www.modelscope.cn/models/camenduru/control_v11p_sd15_canny)
 
 ### 2. 安装
 

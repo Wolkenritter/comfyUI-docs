@@ -3,7 +3,7 @@
     <!-- Google AdSense -->
     <template v-if="type === 'adsense'">
       <ins class="adsbygoogle"
-        style="display:block"
+        style="display:block;height: 90px;"
         data-ad-client="ca-pub-2644340141064615"
         data-ad-slot="4695046211"
         data-ad-format="auto"
@@ -135,9 +135,6 @@ const startRotator = () => {
 }
 
 onMounted(() => {
-  if (props.type === 'adsense') {
-    loadAdsenseScript()
-  }
   startRotator()
 })
 
