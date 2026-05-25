@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'ComfyUI 中文文档',
   description: 'ComfyUI 安装指南、界面设置、节点指南、设置指南',
   base: '/comfyUI-docs/',
+  base: '/',
   head: [
     ['script', { async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxx', crossorigin: 'anonymous' }]
   ],
