@@ -4,7 +4,7 @@
 
 ## 📖 文档预览
 
-访问：[https://comfyui-wiki.github.io/comfyUI-docs/](https://comfyui-wiki.github.io/comfyUI-docs/)
+访问：[https://docs.aijs.wang/](https://docs.aijs.wang/)
 
 ## ✨ 功能特色
 
@@ -27,7 +27,7 @@ npm install
 npm run docs:dev
 ```
 
-访问 http://localhost:5173 查看文档。
+访问 http://localhost:5173/comfyUI-docs/ 查看文档。
 
 ### 构建生产版本
 
