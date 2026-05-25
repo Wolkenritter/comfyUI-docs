@@ -1,0 +1,11 @@
+# 自定义域名配置
+# 将此文件复制到 docs/.vitepress/dist/CNAME
+# 并将下面的域名替换为你的实际域名
+
+# 示例：
+# docs.comfyui.example.com
+
+# 注意：
+# 1. 创建 CNAME 文件后，构建时会被删除
+# 2. 建议在部署后重新添加，或使用 GitHub Actions 自动处理
+# 3. 确保 DNS CNAME 记录已正确配置

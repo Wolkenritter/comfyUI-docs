@@ -1,0 +1,138 @@
+version: 1
+plan:
+  name: 完善ComfyUI文档内容
+  max_concurrency: 5
+  max_consecutive_failures: 3
+  max_cycles: 15
+tasks:
+  - id: homepage-config
+    title: 更新首页和导航配置
+    prompt: |
+      参考 https://comfyui-wiki.com/zh 的结构，更新 VitePress 项目的首页 docs/index.md 和配置文件 docs/.vitepress/config.js。
+
+      需要实现的结构：
+      - 安装指南（桌面版、Windows、Linux、Mac、云端、Git安装、秋叶启动器、模型安装）
+      - 界面说明（界面指南、节点操作、工作流、提示词、文件结构、遮罩编辑器、部分执行、子图功能、工作流模板、设置菜单、Comfy设置、LiteGraph、外观、快捷键、扩展、服务器配置）
+      - 基础教程（11个：启动服务、首次图片生成、共用模型、升级、模型安装、提示词基础、局部重绘、扩图、图像放大、Embedding、LoRA）
+      - 高级教程（ControlNet系列、视频生成系列、Flux系列、图像编辑系列等）
+      - 工作流示例（20个）
+      - 在线资源（模型、LoRA、Flux、ControlNet、插件、Embedding、放大、VAE、UNET等）
+      - 节点文档（136个内置节点）
+
+      更新 config.js 的 nav 和 sidebar 配置，确保导航完整。
+    assigned_to: general
+    verify_prompt: 检查 index.md 是否包含完整导航结构，config.js 是否包含所有 nav 和 sidebar 配置
+    timeout_ms: 600000
+  - id: install-docs
+    title: 扩展安装指南
+    prompt: |
+      在 docs/guide/installation.md 基础上，添加更多安装相关内容到 docs/guide/ 目录：
+
+      创建以下新文档：
+      1. docs/guide/comfyui-desktop.md - ComfyUI Desktop 安装指南
+      2. docs/guide/install-git.md - Git 安装教程
+      3. docs/guide/aaaki-launcher.md - 秋叶启动器使用指南
+      4. docs/guide/cloud.md - 云端运行 ComfyUI
+      5. docs/guide/model-install.md - 模型安装指南
+
+      每篇文档要包含：详细步骤、注意事项和常见问题、相关链接
+    assigned_to: general
+    verify_prompt: 检查所有安装文档是否创建，内容是否详细
+    timeout_ms: 600000
+  - id: interface-docs
+    title: 完善界面文档
+    prompt: |
+      在 docs/guide/ 目录下创建界面相关的详细文档：
+
+      1. docs/guide/interface-basic.md - 界面指南（画布、菜单栏、节点面板、快捷键）
+      2. docs/guide/interface-nodes.md - 节点操作指南（添加、连接、删除、搜索）
+      3. docs/guide/interface-workflow.md - 工作流使用（保存、加载、导出、模板）
+      4. docs/guide/interface-prompt.md - 提示词技巧
+      5. docs/guide/interface-settings.md - 设置菜单详解
+
+      重点内容：界面布局图、各区域功能说明、常用操作步骤、快捷键对照表
+    assigned_to: general
+    verify_prompt: 检查界面文档是否覆盖主要功能区域
+    timeout_ms: 600000
+  - id: basic-tutorials
+    title: 创建基础教程
+    prompt: |
+      在 docs/tutorial/ 目录创建基础教程文档：
+
+      1. docs/tutorial/how-to-run.md - 如何启动服务
+      2. docs/tutorial/first-image.md - 首次图片生成
+      3. docs/tutorial/share-models.md - 与WebUI共用模型
+      4. docs/tutorial/update.md - 如何升级ComfyUI
+      5. docs/tutorial/install-models.md - 安装不同类型模型
+      6. docs/tutorial/prompt-basic.md - 提示词基础
+      7. docs/tutorial/inpainting.md - 局部重绘教程
+      8. docs/tutorial/outpainting.md - 扩图教程
+      9. docs/tutorial/upscale.md - 图像放大教程
+      10. docs/tutorial/embedding.md - Embedding 使用教程
+      11. docs/tutorial/lora.md - LoRA 使用教程
+
+      每篇教程包含：前提条件、详细步骤、工作流说明、参数解释、示例
+    assigned_to: general
+    verify_prompt: 检查所有基础教程是否包含详细步骤和参数说明
+    timeout_ms: 600000
+  - id: advanced-tutorials
+    title: 创建高级教程
+    prompt: |
+      在 docs/tutorial/advanced/ 目录创建高级教程：
+
+      1. docs/tutorial/advanced/controlnet.md - ControlNet 安装和使用
+      2. docs/tutorial/advanced/controlnet-canny.md - Canny ControlNet 教程
+      3. docs/tutorial/advanced/controlnet-depth.md - Depth ControlNet 教程
+      4. docs/tutorial/advanced/controlnet-openpose.md - OpenPose ControlNet 教程
+      5. docs/tutorial/advanced/multi-controlnet.md - 多ControlNet组合
+      6. docs/tutorial/advanced/flux-t2i.md - Flux 文生图教程
+      7. docs/tutorial/advanced/flux-i2i.md - Flux 图生图教程
+      8. docs/tutorial/advanced/flux-fill.md - Flux Fill 图像修复
+      9. docs/tutorial/advanced/hunyuan-t2v.md - 腾讯混元文生视频
+      10. docs/tutorial/advanced/hunyuan-i2v.md - 腾讯混元图生视频
+      11. docs/tutorial/advanced/wan21.md - Wan2.1 视频生成
+
+      每篇包含：模型安装、工作流配置、参数调整、示例
+    assigned_to: general
+    verify_prompt: 检查高级教程是否包含模型安装和完整工作流
+    timeout_ms: 600000
+  - id: workflow-docs
+    title: 扩展工作流文档
+    prompt: |
+      在 docs/workflow/ 目录现有文件基础上添加更多工作流：
+
+      1. docs/workflow/sdxl.md - SDXL 工作流
+      2. docs/workflow/stable-cascade.md - Stable Cascade 工作流
+      3. docs/workflow/unclip.md - UnCLIP 工作流
+      4. docs/workflow/hypernetworks.md - Hypernetworks 工作流
+      5. docs/workflow/gligen.md - GLIGEN 工作流
+      6. docs/workflow/video.md - 视频生成工作流
+      7. docs/workflow/lcm.md - LCM 工作流
+      8. docs/workflow/turbo.md - SDXL Turbo 工作流
+      9. docs/workflow/model-merging.md - 模型合并工作流
+      10. docs/workflow/area-composition.md - 区域合成工作流
+
+      每篇包含：节点连接图、参数配置、使用场景
+    assigned_to: general
+    verify_prompt: 检查工作流文档是否包含节点连接说明
+    timeout_ms: 600000
+  - id: resource-docs
+    title: 创建资源文档
+    prompt: |
+      在 docs/resource/ 目录创建资源指南：
+
+      1. docs/resource/models.md - Stable Diffusion 模型资源
+      2. docs/resource/flux-models.md - Flux 模型资源
+      3. docs/resource/lora-models.md - LoRA 模型资源
+      4. docs/resource/controlnet-models.md - ControlNet 模型资源
+      5. docs/resource/embedding-models.md - Embedding 模型资源
+      6. docs/resource/upscale-models.md - 放大模型资源
+      7. docs/resource/vae-models.md - VAE 模型资源
+      8. docs/resource/custom-nodes.md - 优秀自定义节点推荐
+      9. docs/resource/tools.md - 相关工具资源
+      10. docs/resource/official.md - ComfyUI 官方资源
+
+      每篇包含：模型列表、下载链接、版本说明、适用场景
+    assigned_to: general
+    verify_prompt: 检查资源文档是否包含模型下载链接
+    timeout_ms: 600000
