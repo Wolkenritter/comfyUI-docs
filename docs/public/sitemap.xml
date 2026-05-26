@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://comfyui.aijs.wang/</loc>
+    <loc>https://aijs.wang/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/installation</loc>
+    <loc>https://aijs.wang/guide/installation</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/comfyui-desktop</loc>
+    <loc>https://aijs.wang/guide/comfyui-desktop</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/install-git</loc>
+    <loc>https://aijs.wang/guide/install-git</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/aaaki-launcher</loc>
+    <loc>https://aijs.wang/guide/aaaki-launcher</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/cloud</loc>
+    <loc>https://aijs.wang/guide/cloud</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/model-install</loc>
+    <loc>https://aijs.wang/guide/model-install</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/guide/interface-basic</loc>
+    <loc>https://aijs.wang/guide/interface-basic</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/tutorial/</loc>
+    <loc>https://aijs.wang/tutorial/</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/tutorial/advanced/controlnet</loc>
+    <loc>https://aijs.wang/tutorial/advanced/controlnet</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/tutorial/advanced/flux-t2i</loc>
+    <loc>https://aijs.wang/tutorial/advanced/flux-t2i</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/resource/</loc>
+    <loc>https://aijs.wang/resource/</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/resource/models</loc>
+    <loc>https://aijs.wang/resource/models</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/resource/lora-models</loc>
+    <loc>https://aijs.wang/resource/lora-models</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://comfyui.aijs.wang/comfyui-nodes/</loc>
+    <loc>https://aijs.wang/comfyui-nodes/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

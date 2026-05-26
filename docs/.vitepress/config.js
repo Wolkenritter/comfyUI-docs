@@ -13,7 +13,7 @@ export default defineConfig({
     ['meta', { property: 'og:site_name', content: 'ComfyUI 中文文档' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['link', { rel: 'canonical', href: 'https://comfyui.aijs.wang/' }],
+    ['link', { rel: 'canonical', href: 'https://aijs.wang/' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     [
       'script',

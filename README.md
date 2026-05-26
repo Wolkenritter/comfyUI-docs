@@ -4,7 +4,7 @@
 
 ## 📖 文档预览
 
-访问：[https://comfyui.aijs.wang/](https://comfyui.aijs.wang/)
+访问：[https://aijs.wang/](https://aijs.wang/)
 
 ## ✨ 功能特色
 
@@ -51,21 +51,6 @@ npm run docs:build
 
 自动部署配置：`.github/workflows/deploy.yml`
 
-### 自定义域名
-
-1. 在 `docs/.vitepress/dist/` 创建 `CNAME` 文件
-2. 填入你的域名（如 `docs.yourdomain.com`）
-3. 在域名服务商添加 DNS CNAME 记录指向你的 GitHub Pages
-
-### Vercel / Netlify
-
-```bash
-# Vercel
-npx vercel
-
-# Netlify
-npx netlify deploy
-```
 
 ## 📁 目录结构
 
@@ -102,6 +87,11 @@ docs/
 
 - [VitePress](https://vitepress.dev/) - 静态网站生成器
 - [Vue 3](https://vuejs.org/) - JavaScript 框架
+
+## 🌍 语言
+
+- [中文文档](./README.md) - 中文文档
+- [English Documentation](./README-en.md) - English documentation
 
 ## 📝 贡献
 

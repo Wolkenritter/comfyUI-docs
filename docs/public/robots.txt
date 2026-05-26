@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://comfyui.aijs.wang/sitemap.xml
+Sitemap: https://aijs.wang/sitemap.xml
